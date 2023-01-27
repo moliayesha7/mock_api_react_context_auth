@@ -1,5 +1,32 @@
 {
-    "User": {
-      "title": { "string": {} }
+    "data": {
+      "post": [
+        {
+            "id":1,
+            "title": "Dolorem nam.",
+            "message": "Dolorem nam.",
+            "name": "Dolorem nam.",
+            "createdAt": "Dolorem nam.",
+            "body": "Dolorem nam."
+        },
+        {
+            "id":2,
+            "title": "Dolorem nam.2",
+            "message": "Dolorem nam.2",
+            "name": "Dolorem nam.2",
+            "createdAt": "Dolorem nam.2",
+            "body": "Dolorem nam.4"
+        },
+        {
+            "id":3,
+            "title": "Dolorem nam.24",
+            "message": "Dolorem nam.24",
+            "name": "Dolorem nam.24",
+            "createdAt": "Dolorem nam.24",
+            "body": "Dolorem nam.4"
+        }
+    ]
+   
+    
     }
-  }
+}
