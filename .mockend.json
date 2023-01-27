@@ -92,5 +92,28 @@
       }
     }
   
+  },
+  "Comment": {
+    "_": {
+      "items": 25
+    },
+    "email": {
+      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "post": {
+      "belongsTo": "Post"
+    }
   }
 }

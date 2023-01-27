@@ -23,8 +23,8 @@ export const deletePost = (id) => Api.delete(`/posts/${id}`);
 export const likePost = (id) => Api.patch(`/posts/${id}/likePost`);
 
 
-export const signUp = (formData) => Api.post('/user/signup', formData);
-export const signIn = (formData) => Api.post('/user/signin', formData);
+export const signUp = (formData) => Api.post('/signup', formData);
+export const signIn = (formData) => Api.post('/signin', formData);
 
 
 export const comment = (value, id) => Api.post(`/posts/${id}/commentPost`, { value });
