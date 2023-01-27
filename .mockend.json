@@ -55,7 +55,7 @@
       "belongsTo": "Post"
     }
   },
-  "User": {
+  "Signup": {
     "_": {
       "items": 25
     },
@@ -77,5 +77,20 @@
     "post": {
       "belongsTo": "Post"
     }
+  },
+  "Signin": {
+    "_": {
+      "items": 25
+    },
+    "email": {
+      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "password": {
+      "loremWords": {
+        "minLength": 5,
+        "maxLength": 20
+      }
+    }
+  
   }
 }

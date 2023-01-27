@@ -3,7 +3,9 @@ import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE, FETCH_BY_SEARCH, START_LOADING
 export const getPosts = (page) => async (dispatch) => {
     try {
         dispatch({ type: START_LOADING });
-        const { data } = await api.fetchPosts(page);
+        // new const { data } = await api.fetchPosts(page=1);
+        const { data } = await api.fetchPosts();
+      
         dispatch({ type: FETCH_ALL, payload: data });
         dispatch({ type: END_LOADING });
     } catch (error) {

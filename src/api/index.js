@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = "https://jsonplaceholder.typicode.com";  //https://tang-memories-project.herokuapp.com' http://localhost:5000/
+const url = "https://mockend.com/moliayesha7/mock_api_react_context_auth";  //https://tang-memories-project.herokuapp.com' http://localhost:5000/
 
 const Api = axios.create({ baseURL: url });
 

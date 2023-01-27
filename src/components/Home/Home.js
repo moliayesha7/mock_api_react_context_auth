@@ -23,10 +23,10 @@ export const Home = () => {
     const page = query.get('page') || 1;
     const searchQuery = query.get('searchQuery');
 
-    /*     useEffect(() => {
+        useEffect(() => {
             dispatch(getPosts());
     
-        }, [currentId, dispatch]) */
+        }, [currentId, dispatch]) 
 
     const handleKeyPress = (e) => {
         if (e.keyCode === 13) {
@@ -79,9 +79,9 @@ export const Home = () => {
                         </AppBar>
 
                         <Form currentId={currentId} setCurrentId={setCurrentId} />
-                        <Paper elevation={6} className={classes.pagination}>
+                        {/* new <Paper elevation={6} className={classes.pagination}>
                             <Pagination page={page} />
-                        </Paper>
+                        </Paper> */}
                     </Grid>
                 </Grid>
             </Container>

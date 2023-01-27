@@ -18,7 +18,7 @@ const Post = ({ post, setCurrentId }) => {
 
     const userId = user?.reuslt?.googleId || user?.reuslt?._id ;
     const hasLikePost = post.likes.find((like) => like ===  userId);
-
+    console.log(post)
     const Likes = () => {
         if (post.likes.length > 0) {
             return hasLikePost
