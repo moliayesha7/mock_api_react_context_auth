@@ -139,7 +139,7 @@
       "hasMany": "Review"
     }
   },
-  "review": {
+  "Review": {
     "_": {
       "items": 25
     },
@@ -149,7 +149,7 @@
         "maxLength": 20
       }
     },
-    "view": {
+    "review": {
       "loremWords": {
         "minLength": 5,
         "maxLength": 20
