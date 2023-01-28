@@ -139,7 +139,7 @@
       "hasMany": "Review"
     }
   },
-  "reviews": {
+  "review": {
     "_": {
       "items": 25
     },
