@@ -52,7 +52,7 @@
       }
     },
     "post": {
-      "belongsTo": "Post"
+      "hasMany": "Comment"
     }
   },
   "Signup": {
@@ -139,7 +139,7 @@
       }
     },
     "post": {
-      "belongsTo": "Review"
+      "hasMany": "Review"
     }
   },
   "reviews": {
