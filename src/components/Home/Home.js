@@ -14,7 +14,7 @@ const useQuery = () => {
 }
 export const Home = () => {
     const dispatch = useDispatch();
-    const [currentId, setCurrentId] = useState(null);
+    const [currentId, setCurrentId] = useState(1);
     const [search, setSearch] = useState('');
     const [tags, setTags] = useState([]);
     const classes = useStyles();
@@ -24,8 +24,8 @@ export const Home = () => {
     const searchQuery = query.get('searchQuery');
 
         useEffect(() => {
-            dispatch(getPosts());
-    
+            dispatch(getPosts(page));
+            console.log("tags",tags)
         }, [currentId, dispatch]) 
 
     const handleKeyPress = (e) => {
@@ -79,9 +79,9 @@ export const Home = () => {
                         </AppBar>
 
                         <Form currentId={currentId} setCurrentId={setCurrentId} />
-                        {/* new <Paper elevation={6} className={classes.pagination}>
+                         <Paper elevation={6} className={classes.pagination}>
                             <Pagination page={page} />
-                        </Paper> */}
+                        </Paper>
                     </Grid>
                 </Grid>
             </Container>

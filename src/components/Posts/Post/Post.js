@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import useStyles from './styles';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography, ButtonBase } from '@material-ui/core';
 import momment from 'moment';
@@ -18,7 +18,7 @@ const Post = ({ post, setCurrentId }) => {
 
     const userId = user?.reuslt?.googleId || user?.reuslt?._id ;
     const hasLikePost = post.likes.find((like) => like ===  userId);
-    console.log(post)
+  
     const Likes = () => {
         if (post.likes.length > 0) {
             return hasLikePost
@@ -49,11 +49,11 @@ const Post = ({ post, setCurrentId }) => {
                     image={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'}
                     title={post.title}
                 />
-                <div className={classes.overlay}>
+                {/* <div className={classes.overlay}>
                     <Typography variant="h6">{post.name}</Typography>
                     <Typography variant="body2">{momment(post.createdAt).fromNow()}</Typography>
-                </div>
-                {
+                </div> */}
+                {/* {
                     (user?.reuslt?.googleId === post.creator || user?.reuslt?._id == post.creator) && (
                         <div className={classes.overlay2}>
                             <Button style={{ color: 'white' }} size="small" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setCurrentId(post._id) }} >
@@ -61,13 +61,13 @@ const Post = ({ post, setCurrentId }) => {
                             </Button>
                         </div>
                     )
-                }
+                } */}
                 <div className={classes.details}>
                     <Typography variant="body2" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag}`)}</Typography>
                 </div>
                 <Typography variant="h5" component="h2" className={classes.title}>{post.title}</Typography>
                 <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">{post.message.split(' ').splice(0, 20).join(' ')}...</Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">{post.body.split(' ').splice(0, 20).join(' ')}...</Typography>
                 </CardContent>
             </ButtonBase>
 
@@ -76,9 +76,9 @@ const Post = ({ post, setCurrentId }) => {
                 {/* <Button size="small" color="primary" disabled={!user?.reuslt} onClick={() => handlerLikePost()}>
                     <Likes />
                 </Button> */}
-                {(user?.reuslt?.googleId === post.creator || user?.reuslt?._id == post.creator) && (
+                {/* {(user?.reuslt?.googleId === post.creator || user?.reuslt?._id == post.creator) && (
                     <Button size="small" color="primary" onClick={() => disPatch(deletePost(post._id))}><DeleteIcon fontSize="small" />Delete</Button>
-                )}
+                )} */}
             </CardActions>
         </Card>
     )
