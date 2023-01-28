@@ -42,16 +42,13 @@
     "likes": {
       "string": ["yes", "no"]
     },
-    "comments": {
-      "string": ["yes", "no"]
-    },
     "createdAt": {
       "dateTime": {
         "min": "2010-01-01T00:00:00Z",
         "max": "2020-12-31T23:59:59Z"
       }
     },
-    "post": {
+    "comments": {
       "hasMany": "Comment"
     }
   },
@@ -138,7 +135,7 @@
         "max": 5000
       }
     },
-    "post": {
+    "reviews": {
       "hasMany": "Review"
     }
   },
@@ -162,12 +159,6 @@
       "int": {
         "min": 1,
         "max": 5
-      }
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2023-01-01T00:00:00Z",
-        "max": "2040-12-31T23:59:59Z"
       }
     },
     "restaurant": {
